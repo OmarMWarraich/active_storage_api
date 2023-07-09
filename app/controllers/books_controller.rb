@@ -5,7 +5,7 @@ class BooksController < ApplicationController
   def index
     @books = Book.all
 
-    render json: @books.to_json(include: [:image_url])
+    render json: BookSerializer.new(@books).serializable_hash[:data].map{|hash| hash[:attributes]}
   end
 
   # GET /books/1
