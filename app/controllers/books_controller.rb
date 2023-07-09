@@ -38,6 +38,11 @@ class BooksController < ApplicationController
     @book.destroy
   end
 
+  def latest
+    @book = Book.last
+    render json: @book
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_book
