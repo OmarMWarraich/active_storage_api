@@ -5,7 +5,7 @@ class BooksController < ApplicationController
   def index
     @books = Book.all
 
-    render json: @books
+    render json: @books.to_json(include: [:image_url])
   end
 
   # GET /books/1
@@ -39,7 +39,7 @@ class BooksController < ApplicationController
   end
 
   def latest
-    @book = Book.last
+    @book = Book.last.to_json(include: [:image_url])
     render json: @book
   end
 
