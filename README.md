@@ -60,7 +60,7 @@ After you're finished please remove all the comments and instructions!
 
 This is an active storage api hosted on heroku. It is a simple api that allows you to upload images to a cloud storage service. It is built with Ruby on Rails and uses the active storage gem.
 
-To interact with the api, you can use the following endpoints:
+To interact with the api, you can use the following steps:
 
 - cd into the project directory
 - cd frontend
