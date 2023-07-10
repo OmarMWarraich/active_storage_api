@@ -16,7 +16,7 @@ function FileForm() {
     submitToAPI(data);
   }
   function submitToAPI(data) {
-    fetch("http://localhost:3000/books", {
+    fetch("https://afternoon-castle-25737-b28e8fca3464.herokuapp.com/books", {
       method: "POST",
       body: data,
     })
